@@ -14,13 +14,17 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="./images/logo.svg" alt="Bella Onojie" class="img">
+                <a href="./index.html"><img src="./images/logo.svg" alt="Bella Onojie" class="logo-img"></a>
             </div>
-            <div class="navlinks">
+            <div class="navlinks" id="menu">
                 <a href="./index.html" class="nav-link nav-current">Home</a>
                 <a href="#" class="nav-link">Product</a>
                 <a href="./faq.html" class="nav-link">FAQ</a>
                 <a href="./contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="navlinks-mobile">
+                <a href="javascript:void(0);" class="icon" onclick="openNav()"><i class="fa-solid fa-bars"></i></a>
+
             </div>
         </nav>
         <div class="banner">
@@ -36,12 +40,9 @@
                     (min-width: 1200px) 1600px,
                     2000px" src="./images/banner.png" alt="A banner image of food on a table." class="banner-img">
             <div class="banner-overlay">
-                <!-- <div class="div-12">Food App</div> -->
-                <h3 class="div-12">Food App</h3>
-                <!-- <div class="div-13"><strong>Why stay hungry, when you can order from <i>Bella Onojie!</i></strong></div> -->
-                <h1 class="div-13"><strong>Why stay hungry, when you can order from <i>Bella Onojie!</i></strong></h1>
-                <!-- <div class="div-14">Download <strong>now</strong> on</div> -->
-                <p class="div-14">Download <strong>now</strong> on</p>
+                <h3 class="banner-h3">Food App</h3>
+                <h1><strong>Why stay hungry, when you can order from <i>Bella Onojie!</i></strong></h1>
+                <p class="banner-dl-prompt">Download <strong>now</strong> on</p>
                 <div class="download-buttons">
                     <a href="#" class="btn">Playstore</a>
                     <a href="#" class="btn">App store</a>
@@ -64,7 +65,6 @@
 
     <main>
         <div class="divider-line"></div>
-        <!-- <div class="div-19">How the app works</div> -->
         <h2 class="center-heading">How the app works</h2>
         <div class="highlight">
             <img srcset="./images/account-phone-100.png 100w,
@@ -85,7 +85,7 @@
             </div>
         </div>
         <div class="highlight">
-            <div class="text-content">
+            <div class="text-content hl-rev">
                 <h3 class="hl-smallhead">Explore varieties</h3>
                 <h2 class="hl-head">Shop for your favorite meals, hot and fresh.</h2>
                 <p class="hl-p">Shop for your favorite meals or drinks and enjoy yourself while doing it.</p>
@@ -120,45 +120,40 @@
                 <p class="hl-p">Checkout and get it delivered with ease.</p>
             </div>
         </div>
-        <div class="div-32">
-            <div class="div-33">
-                <img srcset="./images/banner-footer-100.png 100w,
-                    ./images/banner-footer-200.png 200w,
-                    ./images/banner-footer-400.png 400w,
-                    ./images/banner-footer-800.png 800w,
-                    ./images/banner-footer-1200.png 1200w,
-                    ./images/banner-footer-1600.png 1600w,
-                    ./images/banner-footer-2000.png 2000w" sizes="(min-width: 200px) 400px,
-                    (min-width: 400px) 800px,
-                    (min-width: 800px) 1200px,
-                    (min-width: 1200px) 1600px,
-                    2000px" src="./images/banner-footer.png" alt="Footer banner image of food on a table."
-                    class="img-4">
-                <div class="div-34">
-                    <div class="div-35">
-                        <div class="div-36">Download the app now.</div>
-                        <div class="div-37">
-                            Available on your favorite store. Start your premium experience now
-                        </div>
-                    </div>
-                    <div class="div-38">
-                        <!-- <div class="div-39">Playstore</div>
-                        <div class="div-40">App store</div> -->
-                        <a href="#" class="btn">Playstore</a>
-                        <a href="#" class="btn">App store</a>
-                    </div>
+    </main>
+
+    <section class="banner-footer-outer-wrapper">
+        <div class="banner-footer-inner-wrapper">
+            <img srcset="./images/banner-footer-100.png 100w,
+                ./images/banner-footer-200.png 200w,
+                ./images/banner-footer-400.png 400w,
+                ./images/banner-footer-800.png 800w,
+                ./images/banner-footer-1200.png 1200w,
+                ./images/banner-footer-1600.png 1600w,
+                ./images/banner-footer-2000.png 2000w" sizes="(min-width: 200px) 400px,
+                (min-width: 400px) 800px,
+                (min-width: 800px) 1200px,
+                (min-width: 1200px) 1600px,
+                2000px" src="./images/banner-footer.png" alt="Footer banner image of food on a table."
+                class="banner-footer-img">
+            <div class="banner-footer-text">
+                <div class="banner-footer-dl-labels">
+                    <h2>Download the app now.</h2>
+                    <h4>Available on your favourite mobile platform. Start your premium experience now!</h4>
+                </div>
+                <div class="banner-footer-dl-buttons">
+                    <a href="#" class="btn">Playstore</a>
+                    <a href="#" class="btn">App store</a>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <footer>
-        <div class="div-42">
-            <!-- <div class="column"> -->
+        <div class="footer-wrapper">
             <div>
-                <img src="./images/logo.svg" alt="Bella Onojie" class="img-5">
+                <a href="./index.html"><img src="./images/logo.svg" alt="Bella Onojie" class="logo-img-footer"></a>
             </div>
-            <!-- <div class="column-2"> -->
             <div>
                 <div class="footer-icons">
                     <i class="fa-brands fa-twitter"></i>
@@ -166,12 +161,13 @@
                     <i class="fa-brands fa-instagram"></i>
                 </div>
             </div>
-            <!-- <div class="column-3"> -->
             <div>
-                <div class="div-44">Copyright 2024 bellaonojie.com</div>
+                <p class="copyright-text">Copyright 2024 bellaonojie.com</p>
             </div>
         </div>
     </footer>
+
+    <script src="./js/nav.js"></script>
 </body>
 
 </html>
