@@ -53,8 +53,8 @@ nav {
 }
 
 .img {
-    aspect-ratio: 2;
-    object-fit: auto;
+    /* aspect-ratio: 2; */
+    /* object-fit: auto; */
     object-position: center;
     width: 206px;
 }
@@ -254,7 +254,7 @@ nav {
 
 .two-phones {
     /* aspect-ratio: 0.85; */
-    object-fit: auto;
+    /* object-fit: auto; */
     object-position: center;
     width: 548px;
     align-self: center;
@@ -713,8 +713,8 @@ footer {
 }
 
 .img-5 {
-    aspect-ratio: 2.63;
-    object-fit: auto;
+    /* aspect-ratio: 2.63; */
+    /* object-fit: auto; */
     object-position: center;
     width: 206px;
     max-width: 100vw;
