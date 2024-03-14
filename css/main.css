@@ -239,6 +239,63 @@ h1 {
     filter: drop-shadow(5px 5px 50px #22222294);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.subform {
+    margin: 10px 0 10px 0;
+}
+
+form label {
+    font: 18px Montserrat, sans-serif;
+}
+
+.text-input {
+    width: 100%;
+    border-radius: 10px;
+    border-width: 1px;
+    line-height: 2;
+}
+
+.submit-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-btn {
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+    padding: 10px;
+    background-color: #C22441;
+    color: white;
+    transition: all 0.5s;
+}
+
+.form-btn:hover {
+    transform: scale(1.25);
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    transition: transform 0.5s;
+}
+
+label:has(~ :required)::after {
+    content: " *";
+    color: #C22441;
+}
+
 main {
     display: flex;
     flex-direction: column;

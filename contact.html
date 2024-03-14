@@ -86,7 +86,38 @@
     </header>
 
     <main id="main" role="main">
+        <form action="submit" method="post">
+            <div class="form-block">
+                <div class="subform">
+                    <label for="name">Name</label>
+                    <input type="text" class="text-input" name="name" required>
+                </div>
 
+                <div class="subform">
+                    <label for="email">Email</label>
+                    <input type="text" class="text-input" name="email" required>
+                </div>
+
+                <div class="subform">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="text-input" name="subject">
+                </div>
+
+                <div class="subform">
+                    <label for="messagebox">Message</label>
+                    <textarea name="messagebox" id="messagebox" cols="100" rows="10" class="text-input" required></textarea>
+                </div>
+
+                <div class="subform submit-block">
+                    <div>
+                        <input type="checkbox" name="sub-con" id="sub-con">
+                        <label for="sub-con">Subscribe to emails containing offers, promotions, and updates about Bella Onojie</label>
+                    </div>
+
+                    <button type="submit" class="form-btn">Submit</button>
+                </div>
+            </div>
+        </form>
     </main>
 
     <!-- Pre-footer "download" banner -->
