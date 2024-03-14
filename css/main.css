@@ -19,7 +19,7 @@ header {
     background-color: #fff;
     display: flex;
     width: 100vw;
-    padding-bottom: 56px;
+    /* padding-bottom: 56px; */
     flex-direction: column;
 }
 
@@ -92,7 +92,7 @@ nav {
     color: #fa4a0c;
 }
 
-.div-10 {
+.banner {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -111,13 +111,13 @@ nav {
 }
 
 @media (max-width: 991px) {
-    .div-10 {
+    .banner {
         max-width: 100vw;
         padding: 0 20px;
     }
 }
 
-.img-2 {
+.banner-img {
     position: absolute;
     inset: 0;
     height: 100%;
@@ -126,7 +126,7 @@ nav {
     object-position: center;
 }
 
-.div-11 {
+.banner-overlay {
     position: relative;
     display: flex;
     margin-bottom: 37px;
@@ -183,16 +183,16 @@ nav {
     }
 }
 
-.div-15 {
+.download-buttons {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     white-space: nowrap;
-    margin: 59px 0 0 55px;
+    /* margin: 59px 0 0 55px; */
 }
 
 @media (max-width: 991px) {
-    .div-15 {
+    .download-buttons {
         flex-wrap: wrap;
         margin-top: 40px;
         white-space: initial;
@@ -267,7 +267,7 @@ nav {
 
 @media (max-width: 991px) {
     .two-phones {
-        margin-top: -100px;
+        margin-top: -90px;
     }
 }
 
