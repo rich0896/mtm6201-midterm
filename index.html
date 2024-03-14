@@ -4,30 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella Onojie</title>
+    <title>Bella Onojie - Home</title>
 
+    <!-- Favicon links -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#c2243f">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Bella Onojie">
+    <meta name="application-name" content="Bella Onojie">
+    <meta name="msapplication-TileColor" content="#c2243f">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#c2243f">
+
+    <!-- Font Awesome link for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="./index.html"><img src="./images/logo.svg" alt="Bella Onojie" class="logo-img"></a>
-            </div>
-            <div class="navlinks" id="menu">
-                <a href="./index.html" class="nav-link nav-current">Home</a>
-                <a href="#" class="nav-link">Product</a>
-                <a href="./faq.html" class="nav-link">FAQ</a>
-                <a href="./contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="navlinks-mobile">
-                <a href="javascript:void(0);" class="icon" onclick="openNav()"><i class="fa-solid fa-bars"></i></a>
+<body itemscope itemtype="https://schema.org/Product">
+    <!-- Skip link section, hidden unless a link is focused -->
+    <ul class="skip-links">
+        <li><a href="#top-banner">Skip to Banner</a></li>
+        <li><a href="#main">Skip to main content</a></li>
+        <li><a href="#lower-banner">Skip to Footer Banner</a></li>
+    </ul>
 
+    <!-- Header section, contains navbar and banner. -->
+    <header role="region">
+        <!-- Navigation section, contains logo, links, and hamburger menu on mobile -->
+        <nav role="navigation">
+            <!-- Logo, also links back to index -->
+            <div class="logo">
+                <a href="./index.html"><img src="./images/logo.svg" alt="Bella Onojie" class="logo-img"
+                        aria-label="Bella Onojie logo" itemprop="logo"></a>
+            </div>
+
+            <!-- Collection of navigation links to other pages -->
+            <div class="navlinks" id="menu">
+                <a href="./index.html" class="nav-link nav-current" aria-current="true"
+                    aria-label="Go to site home">Home</a>
+                <a href="#" class="nav-link" aria-current="false" aria-label="Go to Product page">Product</a>
+                <a href="./faq.html" class="nav-link" aria-current="false"
+                    aria-label="Go to Frequently Asked Questions page">FAQ</a>
+                <a href="./contact.html" class="nav-link" aria-current="false"
+                    aria-label="Go to Contact page">Contact</a>
+            </div>
+
+            <!-- Hamburger menu icon, runs JS function that expands navlinks on mobile -->
+            <div class="navlinks-mobile">
+                <a href="javascript:void(0);" onclick="openNav()" aria-label="Expand mobile dropdown navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
             </div>
         </nav>
-        <div class="banner">
+
+        <!-- Banner container, contains banner image, and text overlay -->
+        <div class="banner" id="top-banner" role="banner">
+            <!-- Banner image, with many variable widths for optimal loading -->
             <img srcset="./images/banner-100.png 100w,
                     ./images/banner-200.png 200w,
                     ./images/banner-400.png 400w,
@@ -38,17 +76,23 @@
                     (min-width: 400px) 800px,
                     (min-width: 800px) 1200px,
                     (min-width: 1200px) 1600px,
-                    2000px" src="./images/banner.png" alt="A banner image of food on a table." class="banner-img">
+                    2000px" src="./images/banner.png" alt="A banner image of food on a table." class="banner-img"
+                aria-label="An image of food on a table">
+
+            <!-- Banner text overlay, contains headings and links to app stores -->
             <div class="banner-overlay">
-                <h3 class="banner-h3">Food App</h3>
-                <h1><strong>Why stay hungry, when you can order from <i>Bella Onojie!</i></strong></h1>
+                <h3 class="banner-h3" itemprop="description">Food App</h3>
+                <h1 itemprop="slogan"><strong>Why stay hungry, when you can order from <i>Bella Onojie!</i></strong>
+                </h1>
                 <p class="banner-dl-prompt">Download <strong>now</strong> on</p>
                 <div class="download-buttons">
-                    <a href="#" class="btn">Playstore</a>
-                    <a href="#" class="btn">App store</a>
+                    <a href="#" class="btn" aria-label="Get the app from the Playstore">Playstore</a>
+                    <a href="#" class="btn" aria-label="Get the app from the App Store">App store</a>
                 </div>
             </div>
         </div>
+
+        <!-- Promotional animated phone image, with many variable widths for optimal loading -->
         <img srcset="./images/TwoPhones-100.png 100w,
             ./images/TwoPhones-200.png 200w,
             ./images/TwoPhones-400.png 400w,
@@ -60,13 +104,18 @@
             (min-width: 800px) 1200px,
             (min-width: 1200px) 1600px,
             2000px" src="./images/TwoPhones.png" alt="Two phones showing an example page of the app."
-            class="two-phones">
+            class="two-phones" aria-label="An image of two phones featuring screens from the app" itemprop="image">
     </header>
 
-    <main>
+    <main id="main" role="main">
+        <!-- Divider line to separate animated image and header from main body content -->
         <div class="divider-line"></div>
         <h2 class="center-heading">How the app works</h2>
-        <div class="highlight">
+
+        <!-- First of 3 "highlight" sections, outlining the apps use -->
+        <!-- This one is about account creation -->
+        <div class="highlight" role="contentinfo">
+            <!-- Promotional phone image, with many variable widths for optimal loading -->
             <img srcset="./images/account-phone-100.png 100w,
             ./images/account-phone-200.png 200w,
             ./images/account-phone-400.png 400w,
@@ -77,19 +126,29 @@
             (min-width: 400px) 800px,
             (min-width: 800px) 1200px,
             (min-width: 1200px) 1600px,
-            2000px" src="./images/account-phone.png" alt="The login page of the app." class="phone-model">
+            2000px" src="./images/account-phone.png" alt="The login page of the app." class="phone-model"
+                aria-label="An image of a phone depicting the app's login screen" itemprop="image">
+
+            <!-- Text block of highlight row. Describes image and app use -->
             <div class="text-content">
                 <h3 class="hl-smallhead">Create an account</h3>
                 <h2 class="hl-head">Create / Login to an existing account to get started</h2>
                 <p class="hl-p">An account is created with your email and desired password.</p>
             </div>
         </div>
-        <div class="highlight">
+
+        <!-- Second of 3 "highlight" sections, outlining the apps use -->
+        <!-- This one is about app offerings -->
+        <div class="highlight" role="contentinfo">
+            <!-- Text block of highlight row. Describes image and app use -->
+            <!-- This one has a class that reverses its order on mobile to line up properly with the others -->
             <div class="text-content hl-rev">
                 <h3 class="hl-smallhead">Explore varieties</h3>
                 <h2 class="hl-head">Shop for your favorite meals, hot and fresh.</h2>
                 <p class="hl-p">Shop for your favorite meals or drinks and enjoy yourself while doing it.</p>
             </div>
+
+            <!-- Promotional phone image, with many variable widths for optimal loading -->
             <img srcset="./images/favourites-phone-100.png 100w,
             ./images/favourites-phone-200.png 200w,
             ./images/favourites-phone-400.png 400w,
@@ -100,9 +159,14 @@
             (min-width: 400px) 800px,
             (min-width: 800px) 1200px,
             (min-width: 1200px) 1600px,
-            2000px" src="./images/favourites-phone.png" alt="The favourites page of the app." class="phone-model">
+            2000px" src="./images/favourites-phone.png" alt="The favourites page of the app." class="phone-model"
+                aria-label="An image of a phone depicting the app's food offers" itemprop="image">
         </div>
-        <div class="highlight">
+
+        <!-- Last of 3 "highlight" sections, outlining the apps use -->
+        <!-- This one is about checking out in-app -->
+        <div class="highlight" role="contentinfo">
+            <!-- Promotional phone image, with many variable widths for optimal loading -->
             <img srcset="./images/checkout-phone-100.png 100w,
             ./images/checkout-phone-200.png 200w,
             ./images/checkout-phone-400.png 400w,
@@ -113,7 +177,10 @@
             (min-width: 400px) 800px,
             (min-width: 800px) 1200px,
             (min-width: 1200px) 1600px,
-            2000px" src="./images/checkout-phone.png" alt="The checkout page of the app." class="phone-model">
+            2000px" src="./images/checkout-phone.png" alt="The checkout page of the app." class="phone-model"
+                aria-label="An image of a phone depicting the app's checkout page" itemprop="image">
+
+            <!-- Text block of highlight row. Describes image and app use -->
             <div class="text-content">
                 <h3 class="hl-smallhead">Checkout</h3>
                 <h2 class="hl-head">Finalize your order and get excited! Your food is on it's way!</h2>
@@ -122,8 +189,10 @@
         </div>
     </main>
 
-    <section class="banner-footer-outer-wrapper">
+    <!-- Pre-footer "download" banner -->
+    <section class="banner-footer-outer-wrapper" id="lower-banner" role="region">
         <div class="banner-footer-inner-wrapper">
+            <!-- Secondary banner image, with many variable widths for optimal loading -->
             <img srcset="./images/banner-footer-100.png 100w,
                 ./images/banner-footer-200.png 200w,
                 ./images/banner-footer-400.png 400w,
@@ -135,38 +204,48 @@
                 (min-width: 800px) 1200px,
                 (min-width: 1200px) 1600px,
                 2000px" src="./images/banner-footer.png" alt="Footer banner image of food on a table."
-                class="banner-footer-img">
+                class="banner-footer-img" aria-label="An image featuring food on a table">
+
+            <!-- Banner text overlay, contains headings and links to app stores -->
             <div class="banner-footer-text">
                 <div class="banner-footer-dl-labels">
                     <h2>Download the app now.</h2>
                     <h4>Available on your favourite mobile platform. Start your premium experience now!</h4>
                 </div>
                 <div class="banner-footer-dl-buttons">
-                    <a href="#" class="btn">Playstore</a>
-                    <a href="#" class="btn">App store</a>
+                    <a href="#" class="btn" aria-label="Get the app from the Playstore">Playstore</a>
+                    <a href="#" class="btn" aria-label="Get the app from the App Store">App store</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer section, contains logo, social media icons, and copyright text -->
+    <footer role="region">
         <div class="footer-wrapper">
+            <!-- Logo block -->
             <div>
-                <a href="./index.html"><img src="./images/logo.svg" alt="Bella Onojie" class="logo-img-footer"></a>
+                <a href="./index.html"><img src="./images/logo.svg" alt="Bella Onojie" class="logo-img-footer"
+                        aria-label="Bella Onojie logo" itemprop="logo"></a>
             </div>
+
+            <!-- Social Media Icon block -->
             <div>
                 <div class="footer-icons">
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter" aria-label="Visit us on Twitter / X"></i>
+                    <i class="fa-brands fa-square-facebook" aria-label="Visit us on FaceBook"></i>
+                    <i class="fa-brands fa-instagram" aria-label="Visit us on Instagram"></i>
                 </div>
             </div>
+
+            <!-- Copyright Text block -->
             <div>
                 <p class="copyright-text">Copyright 2024 bellaonojie.com</p>
             </div>
         </div>
     </footer>
 
+    <!-- Link to custom JavaScript function that allows for mobile dropdown navigation -->
     <script src="./js/nav.js"></script>
 </body>
 
