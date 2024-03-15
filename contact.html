@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/ContactPage">
     <!-- Skip link section, hidden unless a link is focused -->
     <ul class="skip-links">
         <li><a href="#top-banner">Skip to Banner</a></li>
@@ -35,7 +35,7 @@
     </ul>
 
     <!-- Header section, contains navbar and banner. -->
-    <header role="region">
+    <header>
         <!-- Navigation section, contains logo, links, and hamburger menu on mobile -->
         <nav role="navigation">
             <!-- Logo, also links back to index -->
@@ -76,45 +76,53 @@
                     (min-width: 800px) 1200px,
                     (min-width: 1200px) 1600px,
                     2000px" src="./images/banner.png" alt="A banner image of food on a table." class="banner-img"
-                aria-label="An image of food on a table">
+                aria-label="An image of food on a table" itemprop="primaryImageOfPage">
 
             <!-- Banner text overlay, contains heading -->
             <div class="banner-overlay">
-                <h1><strong>Contact Us</strong></h1>
+                <h1 role="heading" id="contact-h1"><strong>Contact Us</strong></h1>
             </div>
         </div>
     </header>
 
-    <main id="main" role="main">
-        <form action="submit" method="post">
+    <!-- Main section containing contact form -->
+    <main id="main" role="main" itemprop="mainContentOfPage">
+        <!-- Form itself, doesn't do anything but look pretty -->
+        <form action="#" method="post" role="form">
+            <!-- Styling block for form contents -->
             <div class="form-block">
+                <!-- Name entry block, required -->
                 <div class="subform">
-                    <label for="name">Name</label>
-                    <input type="text" class="text-input" name="name" required>
+                    <label for="name" aria-label="Enter your name">Name</label>
+                    <input type="text" class="text-input" name="name" id="name" required>
                 </div>
 
+                <!-- Email entry block, required -->
                 <div class="subform">
-                    <label for="email">Email</label>
-                    <input type="text" class="text-input" name="email" required>
+                    <label for="email" aria-label="Enter your email">Email</label>
+                    <input type="text" class="text-input" name="email" id="email" required>
                 </div>
 
+                <!-- Subject entry block -->
                 <div class="subform">
-                    <label for="subject">Subject</label>
-                    <input type="text" class="text-input" name="subject">
+                    <label for="subject" aria-label="Enter a subject line for your message">Subject</label>
+                    <input type="text" class="text-input" name="subject" id="subject">
                 </div>
 
+                <!-- Message entry block, required -->
                 <div class="subform">
-                    <label for="messagebox">Message</label>
+                    <label for="messagebox" aria-label="Enter your message">Message</label>
                     <textarea name="messagebox" id="messagebox" cols="100" rows="10" class="text-input" required></textarea>
                 </div>
 
+                <!-- Block containing a checkbox for email subscription and submit button -->
                 <div class="subform submit-block">
                     <div>
-                        <input type="checkbox" name="sub-con" id="sub-con">
+                        <input type="checkbox" name="sub-con" id="sub-con" disabled aria-disabled="true">
                         <label for="sub-con">Subscribe to emails containing offers, promotions, and updates about Bella Onojie</label>
                     </div>
 
-                    <button type="submit" class="form-btn">Submit</button>
+                    <button type="submit" class="form-btn" aria-label="Submit the form">Submit</button>
                 </div>
             </div>
         </form>
@@ -144,15 +152,15 @@
                     <h4>Available on your favourite mobile platform. Start your premium experience now!</h4>
                 </div>
                 <div class="banner-footer-dl-buttons">
-                    <a href="#" class="btn" aria-label="Get the app from the Playstore">Playstore</a>
-                    <a href="#" class="btn" aria-label="Get the app from the App Store">App store</a>
+                    <a href="#" class="btn" aria-label="Get the app from the Playstore" itemprop="significantLink">Playstore</a>
+                    <a href="#" class="btn" aria-label="Get the app from the App Store" itemprop="significantLink">App store</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer section, contains logo, social media icons, and copyright text -->
-    <footer role="region">
+    <footer role="contentinfo">
         <div class="footer-wrapper">
             <!-- Logo block -->
             <div>
@@ -171,7 +179,7 @@
 
             <!-- Copyright Text block -->
             <div>
-                <p class="copyright-text">Copyright 2024 bellaonojie.com</p>
+                <p class="copyright-text" itemprop="copyrightNotice">Copyright 2024 bellaonojie.com</p>
             </div>
         </div>
     </footer>

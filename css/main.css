@@ -154,6 +154,10 @@ h1 {
     font: 58px/80px Poppins, sans-serif;
 }
 
+#contact-h1 {
+    line-height: 0.9;
+}
+
 .super {
     min-height: auto;
 }
@@ -706,8 +710,20 @@ footer {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
     .highlight {
         padding: 0 0px;
+    }
+
+    #contact-h1 {
+        font-size: 70px;
+    }
+
+    main {
+        margin: auto;
+    }
+
+    .submit-block {
+        flex-direction: column;
     }
 }
